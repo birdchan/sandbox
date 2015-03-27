@@ -1,0 +1,7 @@
+
+# python-requests
+# http://docs.python-requests.org/en/latest/user/install/
+pip install requests
+
+
+
