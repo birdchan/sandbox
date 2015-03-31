@@ -1,0 +1,9 @@
+
+# init setup
+https://cloud.google.com/storage/docs/json_api/v1/json-api-python-samples
+
+# have these two ready
+- client_secrets.json
+- oauth2.dat
+
+
