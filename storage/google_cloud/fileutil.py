@@ -31,7 +31,7 @@ def print_usage():
   print "\n"
   print "Usage: python fileutil.py cp local_file [bucket_name]"
   print "Usage: python fileutil.py rm gdrive_file [bucket_name]"
-  print "Usage: python fileutil.py wget gdrive_file [bucket_name] > local_file"
+  print "Usage: python fileutil.py wget gdrive_file [bucket_name]"
   print "\n"
 
 # ===========================================================
@@ -97,16 +97,16 @@ def main(argv):
       if status:
         pass
         #print 'Download %d%%.' % int(status.progress() * 100)
-    #print 'Download Complete!'
-    print fh.getvalue()
+    resp = 'Download Complete!'
+    # save file
+    with open(filename, 'w') as file_:
+      file_.write(fh.getvalue())
   else:
     # raise exception
     sys.exit()
 
   # output
   print json.dumps(resp, indent=2)
-
-
 
 # ===========================================================
 # ===========================================================
